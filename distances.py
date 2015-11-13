@@ -75,6 +75,6 @@ else:
 			distance = result['rows'][0]['elements'][0]['distance']['value']
 			#adjust from meters to miles/km
 			total_distance+= distance*factor
-			print(lines[i]+"->"+lines[i+1]+': '+str(distance)+" "+measurement)
+			print(lines[i]+"->"+lines[i+1]+': '+str(distance*factor)+" "+measurement)
 
 print("Total distance covered in your trip: "+str(total_distance)+" "+measurement)
