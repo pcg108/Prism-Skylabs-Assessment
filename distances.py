@@ -58,8 +58,8 @@ if mode == "straightline":
 			else:
 				distance = vincenty((location.latitude, location.longitude), (location2.latitude, location2.longitude)).kilometers
 			#add to total_distance
-			total_distance+=distance
-			print(lines[i]+"->"+lines[i+1]+': '+str(distance)+" "+measurement)	
+			total_distance+=distance*factor
+			print(lines[i]+"->"+lines[i+1]+': '+str(distance*factor)+" "+measurement)	
 else:
 	#google distance matrix API key
 	#we use the distance matrix api to compute distances for different modes of travel, including driving, walking, bicycling, and transit (see README)
